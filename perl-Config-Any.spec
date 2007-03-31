@@ -6,14 +6,14 @@
 %define	pdir	Config
 %define	pnam	Any
 Summary:	Config::Any - Load configuration from different file formats, transparently
-#Summary(pl.UTF-8):	
+Summary(pl.UTF-8):	Config::Any - przezroczyste wczytywanie konfiguracji z różnych formatów plików
 Name:		perl-Config-Any
 Version:	0.07
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/R/RA/RATAXIS/Config-Any-0.07.tar.gz
+Source0:	http://www.cpan.org/modules/by-authors/id/R/RA/RATAXIS/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	f4233adfa8abb621be7a68f172be000a
 URL:		http://search.cpan.org/dist/Config-Any/
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -45,8 +45,20 @@ to make different choices, without generating extra work for the
 developers. As a developer you only need to learn a single interface
 to be able to use the power of different configuration formats.
 
-# %description -l pl.UTF-8
-# TODO
+%description -l pl.UTF-8
+Config::Any ułatwia aplikacjom i bibliotekom perlowym wczytywanie
+danych konfiguracyjnych z wielu różnych formatów plików. Obsługuje
+XML, YAML, JSON, konfigurację w stylu Apache'a, pliki Windows INI, a
+nawet kod perlowy.
+
+Uzasadnienie istnienia tego modułu jest takie, że programy w Perlu są
+wdrażane na wielu różnych platformach i integrowane z wieloma różnymi
+systemami. Administratorzy i użytkownicy końcowi mogą preferować inne
+formaty konfiguracyjne niż programiści. Elastyczność tkwiąca w
+możliwości wczytywania wielu formatów pozwala różnym użytkownikom
+dokonywać różnych wyborów bez generowania dodatkowej pracy dla
+programistów. Wystarczy, że programista nauczy się jednego interfejsu
+i może wykorzystać potęgę różnych formatów konfiguracji.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
