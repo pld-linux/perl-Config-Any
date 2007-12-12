@@ -8,13 +8,13 @@
 Summary:	Config::Any - Load configuration from different file formats, transparently
 Summary(pl.UTF-8):	Config::Any - przezroczyste wczytywanie konfiguracji z różnych formatów plików
 Name:		perl-Config-Any
-Version:	0.07
+Version:	0.10
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/R/RA/RATAXIS/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	f4233adfa8abb621be7a68f172be000a
+Source0:	http://www.cpan.org/modules/by-authors/id/B/BR/BRICAS/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	ce026e51bee3e5d109e97225a2a370a6
 URL:		http://search.cpan.org/dist/Config-Any/
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -65,17 +65,17 @@ i może wykorzystać potęgę różnych formatów konfiguracji.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Build.PL \
+%{__perl} Makefile.PL \
 	destdir=$RPM_BUILD_ROOT \
 	installdirs=vendor
-./Build
+%{__make} #./Build
 
-%{?with_tests:./Build test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-./Build install
+%{__make} install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
