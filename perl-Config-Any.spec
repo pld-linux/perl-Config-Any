@@ -13,7 +13,7 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/B/BR/BRICAS/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Config/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	ce026e51bee3e5d109e97225a2a370a6
 URL:		http://search.cpan.org/dist/Config-Any/
 BuildRequires:	perl-Module-Build
