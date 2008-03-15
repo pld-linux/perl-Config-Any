@@ -66,16 +66,16 @@ i może wykorzystać potęgę różnych formatów konfiguracji.
 
 %build
 %{__perl} Makefile.PL \
-	destdir=$RPM_BUILD_ROOT \
 	installdirs=vendor
-%{__make} #./Build
+%{__make}
 
 %{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
