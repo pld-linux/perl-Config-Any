@@ -8,13 +8,13 @@
 Summary:	Config::Any - Load configuration from different file formats, transparently
 Summary(pl.UTF-8):	Config::Any - przezroczyste wczytywanie konfiguracji z różnych formatów plików
 Name:		perl-Config-Any
-Version:	0.10
+Version:	0.17
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Config/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	ce026e51bee3e5d109e97225a2a370a6
+# Source0-md5:	8392d962a83c427275dc8711a2450f89
 URL:		http://search.cpan.org/dist/Config-Any/
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
