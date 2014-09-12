@@ -9,7 +9,7 @@ Summary:	Config::Any - Load configuration from different file formats, transpare
 Summary(pl.UTF-8):	Config::Any - przezroczyste wczytywanie konfiguracji z różnych formatów plików
 Name:		perl-Config-Any
 Version:	0.23
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
